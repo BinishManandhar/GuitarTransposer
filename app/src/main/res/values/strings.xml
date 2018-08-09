@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Guitar Transposer</string>
+    <string-array name="chords">
+        <item>A</item>
+        <item>A#/Bb</item>
+        <item>Am</item>
+        <item>B</item>
+        <item>Bm</item>
+        <item>C</item>
+        <item>C#/Db</item>
+        <item>Cm</item>
+        <item>D</item>
+        <item>D#/Eb</item>
+        <item>Dm</item>
+        <item>E</item>
+        <item>Em</item>
+        <item>F</item>
+        <item>F#/Gb</item>
+        <item>Fm</item>
+        <item>G</item>
+        <item>G#/Ab</item>
+        <item>Gm</item>
+    </string-array>
+</resources>

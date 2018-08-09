@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/guitar_background"
+    tools:context=".MainPageUpdated">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="cursive"
+                    android:text="Guitar Transposer"
+                    android:textColor="@color/textColor"
+                    android:textSize="35sp" />
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:paddingBottom="3dp"
+                    android:src="@drawable/white_icon"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/architects_daughter"
+                android:text="Enter Chords:"
+                android:textColor="@color/textColor"
+                android:textSize="23sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/linear1"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/chord1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_selector" />
+
+            <Spinner
+                android:id="@+id/chord2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_selector" />
+
+            <Spinner
+                android:id="@+id/chord3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_selector" />
+
+            <Spinner
+                android:id="@+id/chord4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_selector" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/linear2"
+            android:gravity="center"
+            android:orientation="horizontal"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear3"
+            android:layout_marginBottom="5dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/architects_daughter"
+                android:text="Capo Fret/Transpose:"
+                android:textColor="@color/textColor"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/linear5"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/linear4"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/fromminus"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_alignBaseline="@id/transposefrom"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/architects_daughter"
+                android:background="@drawable/btn_selector"
+                android:text="-"
+                android:textColor="@color/textColor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_toRightOf="@id/fromminus"
+                android:text="From"
+                android:fontFamily="@font/architects_daughter"
+                android:textColor="@color/hintColor"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/transposefrom"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/fromminus"
+                android:enabled="false"
+                android:fontFamily="@font/architects_daughter"
+                android:gravity="center"
+                android:hint="From"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintColor"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/fromplus"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_alignBaseline="@id/transposefrom"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/architects_daughter"
+                android:layout_toRightOf="@id/transposefrom"
+                android:background="@drawable/btn_selector"
+                android:text="+"
+                android:textColor="@color/textColor" />
+
+            <Button
+                android:id="@+id/tominus"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_alignBaseline="@id/transposefrom"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/architects_daughter"
+                android:layout_toRightOf="@id/fromplus"
+                android:background="@drawable/btn_selector"
+                android:text="-"
+                android:textColor="@color/textColor" />
+
+            <EditText
+                android:id="@+id/transposeto"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/tominus"
+                android:enabled="false"
+                android:gravity="center"
+                android:hint="To"
+                android:inputType="number"
+                android:fontFamily="@font/architects_daughter"
+                android:maxLines="1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintColor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_toLeftOf="@id/toplus"
+                android:text="To"
+                android:fontFamily="@font/architects_daughter"
+                android:textColor="@color/hintColor"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/toplus"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_alignBaseline="@id/transposefrom"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/transposeto"
+                android:background="@drawable/btn_selector"
+                android:fontFamily="@font/architects_daughter"
+                android:text="+"
+                android:textColor="@color/textColor" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linear6"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/linear5"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/capochangebttn"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/btn_selector"
+                android:text="Capo Change"
+                android:fontFamily="@font/architects_daughter"
+                android:textColor="@color/textColor" />
+
+            <Button
+                android:id="@+id/transposebttn"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_selector"
+                android:fontFamily="@font/architects_daughter"
+                android:text="Transpose"
+                android:textColor="@color/textColor" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/linear6"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <LinearLayout
+            android:id="@+id/linear7"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/view1"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transposed Chords:"
+                android:fontFamily="@font/architects_daughter"
+                android:textColor="@color/textColor"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear8"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/linear7">
+
+            <EditText
+                android:id="@+id/transposedchord1"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:editable="false"
+                android:gravity="center"
+                android:hint="Chord #1"
+                android:inputType="none"
+                android:fontFamily="@font/architects_daughter"
+                android:maxLines="1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintColor" />
+
+            <EditText
+                android:id="@+id/transposedchord2"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:editable="false"
+                android:gravity="center"
+                android:hint="Chord #2"
+                android:inputType="none"
+                android:fontFamily="@font/architects_daughter"
+                android:maxLines="1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintColor" />
+
+            <EditText
+                android:id="@+id/transposedchord3"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:editable="false"
+                android:gravity="center"
+                android:hint="Chord #3"
+                android:inputType="none"
+                android:fontFamily="@font/architects_daughter"
+                android:maxLines="1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintColor" />
+
+            <EditText
+                android:id="@+id/transposedchord4"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:editable="false"
+                android:gravity="center"
+                android:hint="Chord #4"
+                android:fontFamily="@font/architects_daughter"
+                android:inputType="none"
+                android:maxLines="1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintColor" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

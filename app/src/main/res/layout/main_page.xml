@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainPage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter Chords"
+                android:textColor="@color/textColor"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <EditText android:id="@+id/chord1"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:hint="Chord #1"
+                android:inputType="text|textCapWords"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintColor"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:gravity="center"
+                android:maxLength="3"
+                />
+
+            <EditText   android:id="@+id/chord2"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:hint="Chord #2"
+                android:inputType="text|textCapWords"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintColor"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:gravity="center"
+                android:maxLength="3"/>
+
+            <EditText   android:id="@+id/chord3"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:hint="Chord #3"
+                android:inputType="text|textCapWords"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintColor"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:gravity="center"
+                android:maxLength="3"/>
+
+            <EditText   android:id="@+id/chord4"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:hint="Chord #4"
+                android:inputType="text|textCapWords"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintColor"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:gravity="center"
+                android:maxLength="3"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center">
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capo Fret/Transpose:"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <EditText android:id="@+id/transpose"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/textColor"
+                android:inputType="number"
+                android:maxLines="1"
+                android:gravity="center"
+                android:textSize="20sp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center">
+            <Button android:id="@+id/minus"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:text="-"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+            <Button android:id="@+id/plus"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:text="+"
+                android:gravity="center"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <Button android:id="@+id/transposebttn"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:text="Transpose"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginTop="5dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transposed Chords:"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <EditText   android:id="@+id/transposedchord1"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:hint="Chord #1"
+                android:inputType="none"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintColor"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:gravity="center"
+                android:editable="false"
+                />
+
+            <EditText   android:id="@+id/transposedchord2"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:hint="Chord #2"
+                android:inputType="none"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintColor"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:gravity="center"
+                android:editable="false"/>
+
+            <EditText   android:id="@+id/transposedchord3"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:hint="Chord #3"
+                android:inputType="none"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintColor"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:gravity="center"
+                android:editable="false"/>
+
+            <EditText   android:id="@+id/transposedchord4"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:hint="Chord #4"
+                android:inputType="none"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintColor"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:gravity="center"
+                android:editable="false"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
