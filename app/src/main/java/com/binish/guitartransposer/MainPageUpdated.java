@@ -67,12 +67,10 @@ public class MainPageUpdated extends AppCompatActivity implements View.OnClickLi
         chord1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(whichBttn.equals("capo")){
+                if(whichBttn.equals("capo"))
                     capoChange();
-                }
-                else if(whichBttn.equals("transpose")){
+                else if(whichBttn.equals("transpose"))
                     transposeChange();
-                }
             }
 
             @Override
@@ -83,12 +81,10 @@ public class MainPageUpdated extends AppCompatActivity implements View.OnClickLi
         chord2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(whichBttn.equals("capo")){
+                if(whichBttn.equals("capo"))
                     capoChange();
-                }
-                else if(whichBttn.equals("transpose")){
+                else if(whichBttn.equals("transpose"))
                     transposeChange();
-                }
             }
 
             @Override
@@ -99,12 +95,10 @@ public class MainPageUpdated extends AppCompatActivity implements View.OnClickLi
         chord3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(whichBttn.equals("capo")){
+                if(whichBttn.equals("capo"))
                     capoChange();
-                }
-                else if(whichBttn.equals("transpose")){
+                else if(whichBttn.equals("transpose"))
                     transposeChange();
-                }
             }
 
             @Override
@@ -115,12 +109,10 @@ public class MainPageUpdated extends AppCompatActivity implements View.OnClickLi
         chord4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(whichBttn.equals("capo")){
+                if(whichBttn.equals("capo"))
                     capoChange();
-                }
-                else if(whichBttn.equals("transpose")){
+                else if(whichBttn.equals("transpose"))
                     transposeChange();
-                }
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -764,13 +756,10 @@ public class MainPageUpdated extends AppCompatActivity implements View.OnClickLi
                     transposefrom.setText(String.valueOf(from));
                 }
                 if(capoClicked || transposeClicked) {
-                    if (whichBttn.equals("capo")) {
+                    if (whichBttn.equals("capo"))
                         capoChange();
-                    } else if (whichBttn.equals("transpose")) {
+                    else if (whichBttn.equals("transpose"))
                         transposeChange();
-                    } else {
-
-                    }
                 }
                 break;
             case R.id.fromminus:
@@ -779,14 +768,11 @@ public class MainPageUpdated extends AppCompatActivity implements View.OnClickLi
                     transposefrom.setText(String.valueOf(from));
                 }
                 if(capoClicked || transposeClicked) {
-                if (whichBttn.equals("capo")) {
-                    capoChange();
-                } else if (whichBttn.equals("transpose")) {
-                    transposeChange();
-                } else {
-
+                    if (whichBttn.equals("capo"))
+                        capoChange();
+                    else if (whichBttn.equals("transpose"))
+                        transposeChange();
                 }
-            }
                 break;
             case R.id.toplus:
                 if(to>=0&&to<=10) {
@@ -794,13 +780,10 @@ public class MainPageUpdated extends AppCompatActivity implements View.OnClickLi
                     transposeto.setText(String.valueOf(to));
                 }
                 if(capoClicked || transposeClicked) {
-                    if (whichBttn.equals("capo")) {
+                    if (whichBttn.equals("capo"))
                         capoChange();
-                    } else if (whichBttn.equals("transpose")) {
+                    else if (whichBttn.equals("transpose"))
                         transposeChange();
-                    } else {
-
-                    }
                 }
                 break;
             case R.id.tominus:
@@ -809,13 +792,10 @@ public class MainPageUpdated extends AppCompatActivity implements View.OnClickLi
                     transposeto.setText(String.valueOf(to));
                 }
                 if(capoClicked || transposeClicked) {
-                    if (whichBttn.equals("capo")) {
+                    if (whichBttn.equals("capo"))
                         capoChange();
-                    } else if (whichBttn.equals("transpose")) {
+                    else if (whichBttn.equals("transpose"))
                         transposeChange();
-                    } else {
-
-                    }
                 }
                 break;
             case R.id.capochangebttn:
@@ -824,9 +804,8 @@ public class MainPageUpdated extends AppCompatActivity implements View.OnClickLi
                     transposeClicked = false;
 //                    transposebttn.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
                 }
-                if(!whichClicked) {
+                if(!whichClicked)
                     whichBttn = "capo";
-                }
                 else
                     whichBttn = "null";
 
