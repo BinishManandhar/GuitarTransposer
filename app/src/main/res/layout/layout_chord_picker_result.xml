@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.binish.guitartransposer.views.CustomTextView
+        android:id="@+id/textViewChord1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chord"
+        app:customTextStyle="bold"
+        android:textColor="@color/DarkKhaki"
+        app:layout_constraintEnd_toEndOf="@id/pickerChord1"
+        app:layout_constraintStart_toStartOf="@id/pickerChord1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.shawnlin.numberpicker.NumberPicker
+        android:id="@+id/pickerChord1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewChord1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:np_dividerColor="@color/gray"
+        app:np_dividerThickness="1dp"
+        app:np_fadingEdgeStrength="4"
+        app:np_min="0"
+        app:np_height="120dp"
+        app:np_lineSpacingMultiplier="2"
+        app:np_orientation="vertical"
+        app:np_selectedTextSize="18sp"
+        app:np_textColor="@color/GhostWhite"
+        app:np_selectedTextColor="@color/WhiteSmoke"
+        app:np_textSize="14sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

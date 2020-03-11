@@ -1,13 +1,9 @@
 package com.binish.guitartransposer;
 
-import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.AndroidException;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnTouchListener;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -15,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.binish.guitartransposer.functionality.BackEnd;
 
 public class MainPageUpdated extends AppCompatActivity implements View.OnClickListener {
     Spinner chord1, chord2, chord3, chord4;

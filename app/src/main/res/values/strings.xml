@@ -26,4 +26,14 @@
         <item>Gm</item>
         <item>G#m</item>
     </string-array>
+
+    <string name="title_activity_main_page_v2">MainPageV2</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="guitar_transposer">Guitar Transposer</string>
+    <string name="capo">Capo</string>
+    <string name="transponse">Transpose</string>
+    <string name="toggle">Toggle</string>
+    <string name="chord">Chord %1$s</string>
 </resources>

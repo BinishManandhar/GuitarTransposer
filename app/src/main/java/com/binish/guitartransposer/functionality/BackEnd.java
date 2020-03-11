@@ -1,4 +1,4 @@
-package com.binish.guitartransposer;
+package com.binish.guitartransposer.functionality;
 
 import android.util.Log;
 

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainPageV2">
+    <com.binish.guitartransposer.views.Toolbar
+        android:id="@+id/curveToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <com.binish.guitartransposer.views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/guitar_transposer"
+            android:textColor="@color/white"
+            app:customTextStyle="bold"
+            android:textSize="22sp"
+            app:layout_constraintVertical_bias="0.4"
+            />
+    </com.binish.guitartransposer.views.Toolbar>
+
+    <com.binish.guitartransposer.views.CustomTextView
+        android:id="@+id/textViewToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/toggle"
+        app:customTextStyle="bold"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintStart_toStartOf="@id/frameLayoutSwitch"
+        app:layout_constraintEnd_toEndOf="@id/frameLayoutSwitch"
+        app:layout_constraintBottom_toTopOf="@id/frameLayoutSwitch"
+        />
+    <FrameLayout
+        android:id="@+id/frameLayoutSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/curveToolbar"
+        app:layout_constraintBottom_toTopOf="@id/circularWheelPicker_one">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/toggleVariation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@drawable/switch_selector"
+            android:thumb="@null"
+            android:track="@null" />
+
+        <com.binish.guitartransposer.views.CustomTextView
+            android:id="@+id/textViewCapo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/capo"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <com.binish.guitartransposer.views.CustomTextView
+            android:id="@+id/textViewTranspose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:text="@string/transponse"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+    </FrameLayout>
+
+    <org.mab.wheelpicker.CircularWheelView
+        android:id="@+id/circularWheelPicker_one"
+        android:layout_width="190dp"
+        android:layout_height="400dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/curveToolbar"
+        app:wheel_background_color="@color/SlateGray"
+        app:wheel_item_selected_text_color="@color/DarkKhaki"
+        app:wheel_item_text_color="@color/LightSteelBlue"
+        app:layout_constraintVertical_bias="0.4"
+        />
+
+    <include
+        android:id="@+id/layoutChord1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        layout="@layout/layout_chord_picker"
+        app:layout_constraintTop_toTopOf="@id/textViewToggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circularWheelPicker_one"
+        android:layout_marginEnd="10dp"
+        />
+
+    <include
+        android:id="@+id/layoutChord2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        layout="@layout/layout_chord_picker"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutChord1"
+        app:layout_constraintEnd_toEndOf="@id/layoutChord1"
+        app:layout_constraintStart_toStartOf="@id/layoutChord1"
+        />
+    <include
+        android:id="@+id/layoutChord3"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        layout="@layout/layout_chord_picker"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutChord2"
+        app:layout_constraintEnd_toEndOf="@id/layoutChord1"
+        app:layout_constraintStart_toStartOf="@id/layoutChord1"
+        />
+
+    <include
+        android:id="@+id/layoutChord4"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        layout="@layout/layout_chord_picker"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutChord3"
+        app:layout_constraintEnd_toEndOf="@id/layoutChord1"
+        app:layout_constraintStart_toStartOf="@id/layoutChord1"
+        />
+
+    <include layout="@layout/layout_chord_result"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/circularWheelPicker_one"
+        app:layout_constraintVertical_bias="1"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
