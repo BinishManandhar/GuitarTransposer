@@ -35,5 +35,8 @@
     <string name="capo">Capo</string>
     <string name="transponse">Transpose</string>
     <string name="toggle">Toggle</string>
+    <string name="fret">Fret</string>
     <string name="chord">Chord %1$s</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
 </resources>

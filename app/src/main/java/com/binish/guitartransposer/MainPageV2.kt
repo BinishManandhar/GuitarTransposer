@@ -9,9 +9,15 @@ import android.os.Handler
 import android.util.Log
 import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
+import com.binish.guitartransposer.functionality.CapoChange
+import com.binish.guitartransposer.utils.AppUtil
 import kotlinx.android.synthetic.main.activity_main_page_v2.*
 import kotlinx.android.synthetic.main.layout_chord_picker.view.*
+import kotlinx.android.synthetic.main.layout_chord_picker.view.pickerChord1
+import kotlinx.android.synthetic.main.layout_chord_picker.view.textViewChord1
+import kotlinx.android.synthetic.main.layout_chord_picker_result.view.*
 import kotlinx.android.synthetic.main.layout_chord_result.*
+import kotlinx.android.synthetic.main.layout_transpose_from_to.*
 import org.mab.wheelpicker.CircularWheelView
 import org.mab.wheelpicker.MainActivity
 
@@ -20,11 +26,14 @@ class MainPageV2 : AppCompatActivity() {
     private lateinit var animationDrawable: AnimationDrawable
     private lateinit var selectedItem: View
     private var isSelected: Boolean = false
+    private lateinit var capoChange: CapoChange
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_page_v2)
         selectedItem = layoutChord1
+        AppUtil.changeStatusBarColor(this)
+        capoChange = CapoChange()
         setWheelPicker()
         pickerWork()
         pickerWorkResult()
@@ -46,6 +55,19 @@ class MainPageV2 : AppCompatActivity() {
         layoutChord4.setOnClickListener {
             selectedChordLayout(it)
         }
+
+        layoutChord1.pickerChord1.setOnClickListener {
+            selectedChordLayout(layoutChord1)
+        }
+        layoutChord2.pickerChord1.setOnClickListener {
+            selectedChordLayout(layoutChord2)
+        }
+        layoutChord3.pickerChord1.setOnClickListener {
+            selectedChordLayout(layoutChord3)
+        }
+        layoutChord4.pickerChord1.setOnClickListener {
+            selectedChordLayout(layoutChord4)
+        }
     }
 
     private fun setWheelPicker() {
@@ -57,11 +79,14 @@ class MainPageV2 : AppCompatActivity() {
         circularWheelPicker_one.setDataSet(list)
         circularWheelPicker_one.setWheelItemSelectionListener(object : CircularWheelView.WheelItemSelectionListener {
             override fun onItemSelected(index: Int) {
-                if (!isSelected)
-                    selectedItem.pickerChord1
+                if (!isSelected) {
+                    /*selectedItem.pickerChord1
                             .smoothScroll(selectedItem.pickerChord1.value <= index,
                                     if (selectedItem.pickerChord1.value > index) selectedItem.pickerChord1.value - index
-                                    else index - selectedItem.pickerChord1.value)
+                                    else index - selectedItem.pickerChord1.value)*/
+                    selectedItem.pickerChord1.smoothScrollToPosition(index)
+                    selectedChordResultLayout(index)
+                }
                 isSelected = false
             }
         })
@@ -201,6 +226,10 @@ class MainPageV2 : AppCompatActivity() {
             selectedItem.scaleY = 1f + it.animatedValue as Float
         }
         animator.start()
+    }
+
+    private fun selectedChordResultLayout(index: Int){
+        layoutChordResult1.pickerChord1.value = capoChange.capoChange(index - 1,pickerFrom.value,pickerTo.value)
     }
 
     private fun changeCurrentPositionOfWheel(layout: View, newVal: Int) {
